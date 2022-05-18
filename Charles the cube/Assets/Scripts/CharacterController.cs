@@ -9,10 +9,15 @@ public class CharacterController : MonoBehaviour
     private float Vertical;
 
     public float Vel;
+
+    public Camera cam;
+    public Vector3 camPos;
+    public float offset;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        camPos = new Vector3 (16,6,2 + offset);
     }
 
     // Update is called once per frame
@@ -28,6 +33,13 @@ public class CharacterController : MonoBehaviour
     {
         //Movement
         rb.AddForce(Horizontal * Vel ,0,Vertical * Vel);
+        //Camera Config
+    
+
+       cam.transform.position = new Vector3 (16 ,6 , offset + transform.position.z);
     }
+
+    
+
 
 }

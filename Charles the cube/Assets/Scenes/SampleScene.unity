@@ -1038,6 +1038,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 837053093}
   Vel: 7
+  cam: {fileID: 963194227}
+  camPos: {x: 0, y: 0, z: 0}
+  offset: 15
 --- !u!54 &837053093
 Rigidbody:
   m_ObjectHideFlags: 0
