@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CharacterController : MonoBehaviour
 {
+   
+    [SerializeField] private Material myMaterial;
     public Rigidbody rb;
     private float Horizontal;
     private float Vertical;
@@ -33,6 +35,23 @@ public class CharacterController : MonoBehaviour
 
     void LateUpdate()
     {
+        if(Horizontal > 0 )
+        {
+            myMaterial.color = Color.red;
+        }
+        else{
+            myMaterial.color = Color.blue;
+        }
+         if(Vertical > 0 )
+        {
+            myMaterial.color = Color.red;
+        }
+        else
+        {
+            myMaterial.color =  Color.blue;
+
+        }
+
         //Movement
         rb.AddForce(Horizontal * Vel ,0,Vertical * Vel);
         //Camera Config
