@@ -11,8 +11,10 @@ public class CharacterController : MonoBehaviour
     public float Vel;
 
     public Camera cam;
-    public Vector3 camPos;
+    private Vector3 camPos;
     public float offset;
+    public float offsetX;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,7 +38,7 @@ public class CharacterController : MonoBehaviour
         //Camera Config
     
 
-       cam.transform.position = new Vector3 (16 ,6 , offset + transform.position.z);
+       cam.transform.position = new Vector3 (16 + offsetX ,6 , offset + transform.position.z);
     }
 
     
